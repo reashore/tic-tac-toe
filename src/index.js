@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 const Square = (props) =>
-  <button className="square" onClick={() => this.props.onClick()}>
+  <button className="square" onClick={() => props.onClick()}>
     {props.value}
   </button>
 
@@ -25,7 +25,7 @@ class Board extends React.Component {
   renderSquare(i) {
     return (
       <Square
-        value={this.state.square[i]}
+        value={this.state.squares[i]}
         onClick={() => this.handleClick(i)}
       />);
   }
